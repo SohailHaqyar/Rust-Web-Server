@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{project_name}}</title>
+    <link
+      rel="stylesheet"
+      href="static/css/style.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>{{project_name}}</h1>
+    <section class="memes">
+      {{#each cats}}
+      <a href="/meme/{{this.id}}">
+        <article class="meme">
+          <img src="{{this.image_path}}" />
+        </article>
+      </a>
+      {{/each}}
+    </section>
+
+    <p>
+      <a href="/add">Create a new meme</a>
+    </p>
+  </body>
+</html>
